@@ -5,7 +5,7 @@ def ghost_game():
   print("Ghost Game")
   feeling_brave = True
   score = 0
-  printScore = str(score)
+ 
 
   while feeling_brave:
     ghost_door = randint(1, 3)
@@ -14,6 +14,7 @@ def ghost_game():
     door = input("1, 2 or 3?")
     door_num = int(door)
     if door_num == ghost_door:
+      printScore = str(score)
       print("AHHHHHHHHH... You died")
       print("Your Score was " + printScore)
       feeling_brave = False
