@@ -1,8 +1,22 @@
 from random import randint
 from sys import exit
+import os 
+import time
+
+def loading_screen(seconds):
+  screens=open("Screen.txt", 'r')
+  for lines in screens:
+    print(lines, end='')
+    time.sleep(seconds)
+  screens.close
+
+
+#Main Code Start
+os.system('cls' if os.name =='nt' else 'clear')
+loading_screen(.5)
 
 def ghost_game():
-  print("Ghost Game")
+  print("\nGhost Game\n")
   feeling_brave = True
   score = 0
  
